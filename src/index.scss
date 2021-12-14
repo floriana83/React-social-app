@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+$colore:blue;
+
+h1 {
+  color: darken($colore, 20%);
+}
