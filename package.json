@@ -1,6 +1,7 @@
 {
   "name": "react-social-app",
   "version": "0.1.0",
+  "homepage": "https://floriana83.github.io/React-social-app/",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.1",
