@@ -35,10 +35,15 @@ const posts = [
 ];
 
 const Home = () => {
-    const [friendsPreview, setFriendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
+    // const [friendsPreview, setFriendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
+    // // equivale a => const friendsPreview = [];
+    // const [allPosts, setAllPosts] = useState(posts); 
+    // const [messagesPreview, setMessagesPreview] = useState(messages); 
+
+    const [friendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
     // equivale a => const friendsPreview = [];
-    const [allPosts, setAllPosts] = useState(posts); 
-    const [messagesPreview, setMessagesPreview] = useState(messages); 
+    const [allPosts] = useState(posts); 
+    const [messagesPreview] = useState(messages); 
 
     return (
         <section className={styles.home}>
