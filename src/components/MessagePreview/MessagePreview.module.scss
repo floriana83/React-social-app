@@ -1,0 +1,13 @@
+@import "./../../libs/variables.scss";
+.message {
+    border-bottom: 1px solid $lightGray;
+    padding-bottom: 10px;
+
+    h5 {
+        margin-bottom: 2px;
+    }
+
+    p {
+        margin: 2px 0;
+    }
+}

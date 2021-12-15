@@ -1,0 +1,11 @@
+@import "./../../libs/variables.scss";
+
+.post {
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px $lightGray;
+
+    img {
+        width: 100%;
+    }
+}

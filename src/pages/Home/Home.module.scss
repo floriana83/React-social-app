@@ -1,0 +1,15 @@
+@import "./../../libs/variables.scss";
+
+.home {
+    padding: 0 $sidePadding;
+
+    .grid {
+        display: grid;
+        grid-template-columns: 200px auto 200px;
+        column-gap: 20px;
+    }
+
+    .friend {
+        margin-bottom: 10px;
+    }
+}
