@@ -1,49 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import FriendPreview from '../../components/FriendPreview';
 import {MessagePreview} from '../../components/MessagePreview';
 import styles from './Home.module.scss';
 import { Post } from '../../components/Post';
+import { http } from '../../libs/http';
 
-const friends = [
-    {name: "Chandler", photo:"http://randomuser.me/api/portraits/lego/5.jpg"},
-    {name: "Pippo", photo:"http://randomuser.me/api/portraits/lego/7.jpg"},
-    {name: "Cortana", photo:"http://randomuser.me/api/portraits/lego/8.jpg"},
-];
+const friends = [];
 
-const messages = [
-    {text: 'ciao ragazzi!', date: new Date(), sender: 'Eliana'},
-    {text: 'che facciamo stasera?', date: new Date(), sender: 'Peppone'},
-    {text: 'pizza e giochi da noi che dite?', date: new Date(), sender: 'Ambra'},
-    {text: 'ho preso un gioco nuovo, lo proviamo?', date: new Date(), sender: 'Salvo'},
-    {text: 'a che ora ci vediamo?', date: new Date(), sender: 'Albi'},
-    {text: 'Alle 20:00 da noi', date: new Date(), sender: 'Ambra'},
-    {text: 'Ci sto raga! A più tardi!', date: new Date(), sender: 'Flò'},
-];
+const messages = [];
 
-const posts = [
-    {
-        author:"User",
-        text:"In cerca di ispirazione",
-        date:new Date(), 
-        photo:"https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80",
-    },
-    {
-        author:"User",
-        text:"sto imparando react",
-        date:new Date(), 
-    }
-];
+const posts = [];
 
 const Home = () => {
-    // const [friendsPreview, setFriendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
-    // // equivale a => const friendsPreview = [];
-    // const [allPosts, setAllPosts] = useState(posts); 
-    // const [messagesPreview, setMessagesPreview] = useState(messages); 
-
-    const [friendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
+    const [friendsPreview, setFriendsPreview] = useState(friends);           // informazione che sarà monitorata dal componente React
     // equivale a => const friendsPreview = [];
-    const [allPosts] = useState(posts); 
-    const [messagesPreview] = useState(messages); 
+    const [allPosts, setAllPosts] = useState(posts); 
+    const [messagesPreview, setMessagesPreview] = useState(messages); 
+
+    //useEffect si usa quando si vuole lavorare con gli eventi del componente.
+    // ha due parametri: funzione ed evento, dove per evento si intende un array con le prop da osservare. 
+    // con useEffect la prima volta che il componente viene lanciato viene triggerato
+    
+    useEffect(() => {
+        http("/friends?_limit=4").then((data) => setFriendsPreview(data));
+     
+        http("/messages?_limit=4").then((data) => setMessagesPreview(data));
+
+        http("/posts").then((data) => setAllPosts(data));
+        
+    }, []);
+   
 
     return (
         <section className={styles.home}>
