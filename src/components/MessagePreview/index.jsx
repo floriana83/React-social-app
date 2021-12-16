@@ -1,6 +1,5 @@
 import styles from "./MessagePreview.module.scss";
-import { formatDistance } from 'date-fns';
-import {it} from 'date-fns/locale'
+import {DataSet} from '../DataSet/dataSet.js'
 
 const MessagePreview = (props) => {
     const data = props.data || {
@@ -12,10 +11,9 @@ const MessagePreview = (props) => {
         <div className={styles.message}>
             <h5>{data.sender}</h5>
             <p>
-            {formatDistance(new Date(data.date), new Date(), { 
-                addSuffix: true, 
-                locale: it,
-            })}            </p>
+            <small> <DataSet relative={data.date}/> </small>
+
+            </p>
             <p>{data.text}</p>
         </div>
     );
