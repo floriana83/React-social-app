@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/React-social-app/static/css/main.a4dd420c.chunk.css",
-    "main.js": "/React-social-app/static/js/main.bd82b20c.chunk.js",
-    "main.js.map": "/React-social-app/static/js/main.bd82b20c.chunk.js.map",
-    "runtime-main.js": "/React-social-app/static/js/runtime-main.7d50fdb7.js",
-    "runtime-main.js.map": "/React-social-app/static/js/runtime-main.7d50fdb7.js.map",
-    "static/js/2.e772774c.chunk.js": "/React-social-app/static/js/2.e772774c.chunk.js",
-    "static/js/2.e772774c.chunk.js.map": "/React-social-app/static/js/2.e772774c.chunk.js.map",
-    "static/js/3.0cc15760.chunk.js": "/React-social-app/static/js/3.0cc15760.chunk.js",
-    "static/js/3.0cc15760.chunk.js.map": "/React-social-app/static/js/3.0cc15760.chunk.js.map",
+    "main.js": "/React-social-app/static/js/main.c8821ce1.chunk.js",
+    "main.js.map": "/React-social-app/static/js/main.c8821ce1.chunk.js.map",
+    "runtime-main.js": "/React-social-app/static/js/runtime-main.3b64e442.js",
+    "runtime-main.js.map": "/React-social-app/static/js/runtime-main.3b64e442.js.map",
+    "static/js/2.465024da.chunk.js": "/React-social-app/static/js/2.465024da.chunk.js",
+    "static/js/2.465024da.chunk.js.map": "/React-social-app/static/js/2.465024da.chunk.js.map",
+    "static/js/3.c51eee66.chunk.js": "/React-social-app/static/js/3.c51eee66.chunk.js",
+    "static/js/3.c51eee66.chunk.js.map": "/React-social-app/static/js/3.c51eee66.chunk.js.map",
     "index.html": "/React-social-app/index.html",
     "static/css/main.a4dd420c.chunk.css.map": "/React-social-app/static/css/main.a4dd420c.chunk.css.map",
-    "static/js/2.e772774c.chunk.js.LICENSE.txt": "/React-social-app/static/js/2.e772774c.chunk.js.LICENSE.txt",
-    "static/js/main.bd82b20c.chunk.js.LICENSE.txt": "/React-social-app/static/js/main.bd82b20c.chunk.js.LICENSE.txt"
+    "static/js/2.465024da.chunk.js.LICENSE.txt": "/React-social-app/static/js/2.465024da.chunk.js.LICENSE.txt",
+    "static/js/main.c8821ce1.chunk.js.LICENSE.txt": "/React-social-app/static/js/main.c8821ce1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d50fdb7.js",
-    "static/js/2.e772774c.chunk.js",
+    "static/js/runtime-main.3b64e442.js",
+    "static/js/2.465024da.chunk.js",
     "static/css/main.a4dd420c.chunk.css",
-    "static/js/main.bd82b20c.chunk.js"
+    "static/js/main.c8821ce1.chunk.js"
   ]
 }
