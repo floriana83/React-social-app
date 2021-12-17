@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import FriendPreview from '../../components/FriendPreview';
+import FriendPreview from '../../components/FriendPreview/';
 import {MessagePreview} from '../../components/MessagePreview';
 import styles from './Home.module.scss';
 import { Post } from '../../components/Post';
