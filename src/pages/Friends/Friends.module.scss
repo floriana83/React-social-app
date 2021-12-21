@@ -1,0 +1,11 @@
+.Friends {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 60px 20px;
+
+  > * {
+    width: 300px;
+    margin: 20px 0;
+  }
+}

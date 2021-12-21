@@ -13,4 +13,4 @@ const FriendPreview = (props) => {
     );
 };
 
-export default FriendPreview;
+export { FriendPreview };
