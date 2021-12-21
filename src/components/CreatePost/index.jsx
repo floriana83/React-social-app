@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { httpPOST } from "../../libs/http";
 import styles from "./CreatePost.module.scss";
+import Modal from '../Modal'
+
 
 const CreatePost = () => {
   const [authorInput, setAuthorInput] = useState("");
@@ -8,10 +10,13 @@ const CreatePost = () => {
   const [messageInput, setMessageInput] = useState("");
   const [formPostObj, setFormPostObj] = useState({});
 
+
+  const [isModalShown, setModalShown] = useState(false);
   const handleSendBtn = (event) => {
     event.preventDefault();
     httpPOST("/posts", formPostObj);
-    alert("Il post `e stato creato!");
+    // alert("Il post `e stato creato!");
+    setModalShown(!isModalShown);
   };
 
   useEffect(() => {
@@ -49,6 +54,7 @@ const CreatePost = () => {
           <button type="submit" onClick={handleSendBtn}>
             SEND
           </button>
+          {isModalShown && <Modal value="cornflowerblue"/>}
         </div>
 
         <textarea
