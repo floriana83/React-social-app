@@ -1,0 +1,11 @@
+.buttonsList {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+
+  * > {
+    button {
+      margin-right: 10px;
+    }
+  }
+}

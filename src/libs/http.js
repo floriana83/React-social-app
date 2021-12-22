@@ -12,7 +12,7 @@ const httpPOST = (resource, data) =>
     body: JSON.stringify(data),
   }).then((response) => response.json());
 
-  const httpDELETE = (resource) =>
+const httpDELETE = (resource) =>
   fetch(BASE_URL + resource, {
     method: "DELETE",
     headers: {
@@ -20,5 +20,17 @@ const httpPOST = (resource, data) =>
     },
   }).then((response) => response.json());
 
+// Popola la lista degli amici, in base alla lista friendsNames
+const fillFriendsList = (friendsNames) => {
+  let value = 0;
+  for (value in [...Array(friendsNames.length).keys()]) {
+    httpPOST("/friends", {
+      name: friendsNames[value],
+      photo: `https://randomuser.me/api/portraits/men/${value}.jpg`,
+    });
 
-export { http, httpPOST, httpDELETE };
+    setTimeout(() => {}, 100);
+  }
+};
+
+export { http, httpPOST, httpDELETE, fillFriendsList };
