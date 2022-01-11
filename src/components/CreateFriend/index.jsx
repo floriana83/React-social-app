@@ -27,36 +27,72 @@ const CreateFriend = () => {
     });
   }, [friendName, friendPhoto]);
 
-  return (
-    <div className={styles.createFriend}>
-      <form>
-        <div className={styles.__friend}>
-          <input
-            value={friendName}
-            onChange={(e) => setFriendName(e.target.value)}
-            name="friend"
-            id="friend"
-            type="text"
-            placeholder="Friend name"
-            required
-          />
+//   return (
+//     <div className={styles.createFriend}>
+//       <form>
+//         <div className={styles.__friend}>
+//           <input
+//             value={friendName}
+//             onChange={(e) => setFriendName(e.target.value)}
+//             name="friend"
+//             id="friend"
+//             type="text"
+//             placeholder="Friend name"
+//             required
+//           />
 
-          <input
-            onChange={(e) => setFriendPhoto(e.target.value)}
-            value={friendPhoto}
-            name="photo"
-            id="photo"
-            type="text"
-            placeholder="Photo URL"
-          />
+//           <input
+//             onChange={(e) => setFriendPhoto(e.target.value)}
+//             value={friendPhoto}
+//             name="photo"
+//             id="photo"
+//             type="text"
+//             placeholder="Photo URL"
+//           />
 
-          <button type="submit" onClick={handleSendBtn}>
-            ADD
-          </button>
-        </div>
-      </form>
-    </div>
-  );
+//           <button type="submit" onClick={handleSendBtn}>
+//             ADD
+//           </button>
+//         </div>
+//       </form>
+//     </div>
+//   );
+// };
+
+
+return (
+  <div className={styles.createFriend}>
+    {isModalVisibile && (
+      <Modal bgColor="lightgreen" text="Hai un nuovo amico alla lista!" />
+    )}
+    <form>
+      <div className={styles.__friend}>
+        <input
+          value={friendName}
+          onChange={(e) => setFriendName(e.target.value)}
+          name="friend"
+          id="friend"
+          type="text"
+          placeholder="Friend name"
+          required
+        />
+
+        <input
+          onChange={(e) => setFriendPhoto(e.target.value)}
+          value={friendPhoto}
+          name="photo"
+          id="photo"
+          type="text"
+          placeholder="Photo URL"
+        />
+
+        <button type="submit" onClick={handleSendBtn}>
+          ADD
+        </button>
+      </div>
+    </form>
+  </div>
+);
 };
 
 export default CreateFriend;

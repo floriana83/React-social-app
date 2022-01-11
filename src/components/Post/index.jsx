@@ -58,7 +58,7 @@ return (
       <h3>{data.author}</h3>
       <p>
         {/* <small><DataSet relative={data.date}/></small> */}
-//                 <small>{data.date ? <DataSet relative={data.date}/> : <></>}</small>
+                 <small>{data.date ? <DataSet relative={data.date}/> : <></>}</small>
       </p>
       <p>{data.text}</p>
 
