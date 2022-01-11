@@ -1,22 +1,24 @@
 import { useState, useEffect } from "react";
 import { httpPOST } from "../../libs/http";
-import styles from "./CreatePost.module.scss";
-import Modal from '../Modal'
 
+import Modal from "./../Modal";
+import styles from "./CreatePost.module.scss";
 
 const CreatePost = () => {
   const [authorInput, setAuthorInput] = useState("");
   const [imgInput, setImgInput] = useState("");
   const [messageInput, setMessageInput] = useState("");
   const [formPostObj, setFormPostObj] = useState({});
+  const [isModalVisible, setModalVisibile] = useState(false);
 
-
-  const [isModalShown, setModalShown] = useState(false);
   const handleSendBtn = (event) => {
     event.preventDefault();
     httpPOST("/posts", formPostObj);
-    // alert("Il post `e stato creato!");
-    setModalShown(!isModalShown);
+    setModalVisibile(true);
+
+    setTimeout(() => {
+      setModalVisibile(false);
+    }, 3000);
   };
 
   useEffect(() => {
@@ -30,6 +32,10 @@ const CreatePost = () => {
 
   return (
     <div className={styles.createPost}>
+      {isModalVisible && (
+        <Modal bgColor="lightskyblue" text="Il post è stato aggiunto" />
+      )}
+
       <form>
         <div className={styles.__author}>
           <input
@@ -54,7 +60,6 @@ const CreatePost = () => {
           <button type="submit" onClick={handleSendBtn}>
             SEND
           </button>
-          {isModalShown && <Modal value="cornflowerblue"/>}
         </div>
 
         <textarea

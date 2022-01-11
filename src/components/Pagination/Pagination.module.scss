@@ -1,11 +1,35 @@
-.buttonsList {
-  display: flex;
-  list-style: none;
-  justify-content: center;
+@import "./../../libs/variables.scss";
 
-  * > {
-    button {
-      margin-right: 10px;
-    }
+.paginationList {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  padding: 0 10px;
+
+  border: 2px solid $main;
+  border-radius: 16px;
+  list-style: none;
+
+  button {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: 0;
+
+    background-color: transparent;
+    cursor: pointer;
+    color: $secondary;
+    font-size: 1rem;
+  }
+
+  li {
+    margin: 0;
+    padding: 5px 10px;
+    // background-color: $main;
+    border-radius: 100%;
+  }
+
+  .__prevAndNext {
+    width: 80px;
   }
 }
