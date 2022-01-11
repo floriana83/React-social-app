@@ -9,7 +9,7 @@
     "login.css": "/React-social-app/static/css/login.117460f5.chunk.css",
     "login.js": "/React-social-app/static/js/login.0333f4df.chunk.js",
     "login.js.map": "/React-social-app/static/js/login.0333f4df.chunk.js.map",
-    "main.css": "/React-social-app/static/css/main.a5eba9c0.chunk.css",
+    "main.css": "/React-social-app/static/css/main.6611fe84.chunk.css",
     "main.js": "/React-social-app/static/js/main.c6014735.chunk.js",
     "main.js.map": "/React-social-app/static/js/main.c6014735.chunk.js.map",
     "messages.js": "/React-social-app/static/js/messages.1a460c72.chunk.js",
@@ -29,14 +29,14 @@
     "static/css/friends.6ec59fc2.chunk.css.map": "/React-social-app/static/css/friends.6ec59fc2.chunk.css.map",
     "static/css/home.2a89161c.chunk.css.map": "/React-social-app/static/css/home.2a89161c.chunk.css.map",
     "static/css/login.117460f5.chunk.css.map": "/React-social-app/static/css/login.117460f5.chunk.css.map",
-    "static/css/main.a5eba9c0.chunk.css.map": "/React-social-app/static/css/main.a5eba9c0.chunk.css.map",
+    "static/css/main.6611fe84.chunk.css.map": "/React-social-app/static/css/main.6611fe84.chunk.css.map",
     "static/css/new-post.9aa18640.chunk.css.map": "/React-social-app/static/css/new-post.9aa18640.chunk.css.map",
     "static/js/7.0f3fbdc1.chunk.js.LICENSE.txt": "/React-social-app/static/js/7.0f3fbdc1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e7bfd9fd.js",
     "static/js/7.0f3fbdc1.chunk.js",
-    "static/css/main.a5eba9c0.chunk.css",
+    "static/css/main.6611fe84.chunk.css",
     "static/js/main.c6014735.chunk.js"
   ]
 }
