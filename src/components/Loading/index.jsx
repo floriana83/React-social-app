@@ -1,10 +1,14 @@
-// import "./Loading.scss"
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
-const Loading = () => {
+
+function Loading(props) {
     return (
-        <div>Loading...</div>
-    
-    );
-};
+        <div>
+            <h1>{props.title || <Skeleton />}</h1>
+            {props.body || <Skeleton count={10} />}
+        </div>
+    )
+}
 
 export default Loading;
