@@ -18,5 +18,5 @@ test('checks markup in <Footer/> component', () => {
 
     expect(footer).toBeTruthy();
     expect(p).toBeTruthy();
-    expect(p).toBeTruthy();
+    expect(hr).toBeTruthy();
   });
